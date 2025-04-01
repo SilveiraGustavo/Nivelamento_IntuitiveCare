@@ -51,5 +51,5 @@ Antes de executar o script, é recomendado configurar um ambiente virtual para g
 #### Rodando o script
   Com o ambiente virtual ativado e as dependências instaladas, execute:
   ```
-  python script.py
+  python Scraping.py
 
