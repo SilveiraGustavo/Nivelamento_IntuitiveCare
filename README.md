@@ -52,4 +52,45 @@ Antes de executar o script, é recomendado configurar um ambiente virtual para g
   Com o ambiente virtual ativado e as dependências instaladas, execute:
   ```
   python Scraping.py
+  ```
+
+## Teste 2 Transformações de Dados -  Detalhes da implementação
+
+Este projeto extrai dados de um `.pdf` governamental, salva em um arquivo `.csv` e compacta em um `.zip`.  
+
+
+
+### Funcionamento  
+
+1. **Extração de Tabelas:** O código lê todas as tabelas do arquivo `.pdf` especificado e as armazena em um DataFrame.  
+2. **Formatação dos Dados:** Adiciona uma linha em branco entre cada tabela extraída para melhor organização.  
+3. **Substituição de Abreviações:** Converte os valores "OD" e "AMB" para suas descrições completas.  
+4. **Salvamento em CSV:** O DataFrame formatado é salvo como um arquivo `.csv`.  
+5. **Compactação:** O arquivo `.csv` gerado é compactado em um ZIP chamado `Teste_Gustavo.zip` e o `.csv` original é removido após a compactação.
+   
+
+### Estrutura do Código  
+
+- **Extrair_Tabelas(pdf_path):** Lê todas as tabelas do `.pdf` e as retorna como um DataFrame consolidado, adicionando uma linha vazia entre as tabelas extraídas.  
+- **Substituir_Abreviacoes(df):** Substitui as abreviações "OD" e "AMB" por suas descrições completas.  
+- **Salvar_Csv(df, nome_arquivo):** Salva os dados extraídos em um arquivo CSV.  
+- **Compactar_Arquivo(csv_path, zip_path):** Compacta o arquivo `.csv` gerado em um arquivo `.zip` e remove o `.csv` após a compactação.  
+- **Main():** Função principal que executa todo o fluxo do programa: extração de tabelas, formatação, salvamento, e compactação.
+  
+### Execução
+#### Configuração do Ambiente Virtual  
+
+Antes de executar o script, é recomendado configurar um ambiente virtual para gerenciar as dependências do projeto.  
+
+Neste repositório, o arquivo `Tarefa2.txt` lista todas as dependências utilizadas na Tarefa 2. Para instalar os pacotes, é necessário que o ambiente virtual já esteja criado e ativado. Após isso, execute o seguinte comando para instalar os pacotes:
+
+```
+   pip install -r Tarefa2.txt
+```
+#### Rodando o script
+  Com o ambiente virtual ativado e as dependências instaladas, execute:
+  ```
+  python Tarefa2.py
+  ```
+
 
