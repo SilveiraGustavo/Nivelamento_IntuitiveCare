@@ -39,19 +39,22 @@ Antes de executar o script, é recomendado configurar um ambiente virtual para g
    
    ```sh
    python -m venv venv
-
+   ```
 2. **Ativação do ambiente virtual no Windows**:
      ```
      venv\Scripts\activate
-
-3. **Instalar as dependências**:
    ```
-   pip install requests beautifulsoup4
+3. **Instalar as dependências**:
+   Neste repositório, o arquivo `Tarefa1.txt` lista todas as dependências utilizadas na Tarefa 1. Para instalar os pacotes, é necessário que o ambiente virtual já esteja criado e ativado. E rodar o seguinte comando no  terminal:
+
+   ```
+   pip install -r Tarefa1.txt
+   ```
    
 #### Rodando o script
   Com o ambiente virtual ativado e as dependências instaladas, execute:
   ```
-  python Scraping.py
+  python Teste1.py
   ```
 
 ## Teste 2 Transformações de Dados -  Detalhes da implementação
@@ -73,7 +76,7 @@ Este projeto extrai dados de um `.pdf` governamental, salva em um arquivo `.csv`
 
 - **Extrair_Tabelas(pdf_path):** Lê todas as tabelas do `.pdf` e as retorna como um DataFrame consolidado, adicionando uma linha vazia entre as tabelas extraídas.  
 - **Substituir_Abreviacoes(df):** Substitui as abreviações "OD" e "AMB" por suas descrições completas.  
-- **Salvar_Csv(df, nome_arquivo):** Salva os dados extraídos em um arquivo CSV.  
+- **Salvar_Csv(df, nome_arquivo):** Salva os dados extraídos em um arquivo  `.csv`.  
 - **Compactar_Arquivo(csv_path, zip_path):** Compacta o arquivo `.csv` gerado em um arquivo `.zip` e remove o `.csv` após a compactação.  
 - **Main():** Função principal que executa todo o fluxo do programa: extração de tabelas, formatação, salvamento, e compactação.
   
