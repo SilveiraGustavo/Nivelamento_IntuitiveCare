@@ -78,6 +78,8 @@ Este projeto extrai dados de um `.pdf` governamental, salva em um arquivo `.csv`
 - **Main():** Função principal que executa todo o fluxo do programa: extração de tabelas, formatação, salvamento, e compactação.
   
 ### Execução
+### Observação  
+A biblioteca `tabula-py` requer a instalação do Java na máquina para execução dos scripts. O Java pode ser baixado no seguinte [link](https://www.java.com/pt-BR/download/).
 #### Configuração do Ambiente Virtual  
 
 Antes de executar o script, é recomendado configurar um ambiente virtual para gerenciar as dependências do projeto.  
@@ -87,6 +89,8 @@ Neste repositório, o arquivo `Tarefa2.txt` lista todas as dependências utiliza
 ```
    pip install -r Tarefa2.txt
 ```
+
+
 #### Rodando o script
   Com o ambiente virtual ativado e as dependências instaladas, execute:
   ```
